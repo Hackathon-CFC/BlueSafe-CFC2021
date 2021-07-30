@@ -1,0 +1,243 @@
+LIST OF APIS:
+----------------------------------------------
+1. http://169.57.43.76:31110/spots/
+Method: POST
+Payload: 
+		{city: "gurgaon"} 
+Note: You can add any field for filter data
+Response:[
+    {
+        "_id": "87d8d2826c996cd42f961c5b19683397",
+        "_rev": "4-a1ccd2d68a0e38d8b9a6180cb53532f1",
+        "modifiedDate": 1625567805665,
+        "name": "Gurgaon Municipal Carporation",
+        "city": "gurgaon",
+        "address": "Tikri, Sector 48 Gurugram, Haryana 122001",
+        "pin": "122001",
+        "lat": "28.41943903742188",
+        "long": "77.03512207207238",
+        "capacity": "5000L",
+        "approval_stat": "Approved",
+        "distance": "handpump",
+        "quality": [
+            {
+                "ph_level": "13.65",
+                "tds": "190",
+                "salinity": "1200"
+            },
+            {
+                "ph_level": "12.65",
+                "tds": "130",
+                "salinity": "1500"
+            }
+        ],
+        "createdDate": 1625563185527
+    },
+    {
+        "_id": "cb1d9f6f81c0346757c7277cfb6d9572",
+        "_rev": "1-21d5a7d0f347d094f47bad87ff2ffc83",
+        "modifiedDate": 1625563958264,
+        "name": "Gurgaon Municipal Carporation",
+        "city": "gurgaon",
+        "address": "Tikri, Sector 48 Gurugram, Haryana 122001",
+        "pin": "122001",
+        "lat": "28.31943903742188",
+        "long": "77.1512207207238",
+        "capacity": "15000L",
+        "approval_stat": "Approved",
+        "distance": "portable",
+        "quality": [
+            {
+                "ph_level": "13.65",
+                "tds": "180",
+                "salinity": "1200"
+            },
+            {
+                "ph_level": "12.65",
+                "tds": "130",
+                "salinity": "1000"
+            }
+        ],
+        "createdDate": 1625563958264
+    },
+    {
+        "_id": "d8570c2492389a167af8300d6e2aac60",
+        "_rev": "1-f9a68a1e7a11628c3ffad51e7b5f68d3",
+        "modifiedDate": 1625567795514,
+        "name": "Agrawal Water Supply",
+        "city": "gurgaon",
+        "address": "Tikri, Sector 48 Gurugram, Haryana 122001",
+        "pin": "122001",
+        "lat": "28.31943903742188",
+        "long": "77.1512207207238",
+        "capacity": "15000L",
+        "approval_stat": "Approved",
+        "distance": "portable",
+        "quality": [
+            {
+                "ph_level": "12.65",
+                "tds": "180",
+                "salinity": "1200"
+            },
+            {
+                "ph_level": "12.65",
+                "tds": "130",
+                "salinity": "1000"
+            }
+        ],
+        "createdDate": 1625567795514
+    }
+]
+
+2. http://169.57.43.76:31110/spots/add
+Method: POST
+Payload: 
+		{
+        "name": "Agrawal Water Supply",
+        "city": "gurgaon",
+        "address": "Tikri, Sector 48 Gurugram, Haryana 122001",
+        "pin": "122001",
+        "lat": "28.31943903742188",
+        "long": "77.1512207207238",
+        "capacity": "15000L",
+        "approval_stat": "Approved",
+        "source_type": "portable",
+        "quality_params": [
+            {
+                "ph_level": "12.65",
+                "tds": "180",
+                "salinity": "1200"
+            },
+            {
+                "ph_level": "12.65",
+                "tds": "130",
+                "salinity": "1000"
+            }
+        ]
+    }
+Response:{
+    "success": true
+}
+
+3. http://169.57.43.76:31110/spots/update
+Method: POST
+Payload:
+		{
+			"id": "3",
+			"distance": "2.1KM"
+		}
+	or	{
+			"id": "3",
+			"distance": "2.1KM",
+			"name": "Honda foundation",
+			"city": "gurgaon"
+		}
+		
+Note: Id mandetory else will create new record instead of update. // You can add other fields for update
+Response:{
+    "success": true
+}
+
+4. http://169.57.43.76:31110/comp/add
+Method: POST
+Payload: {
+        "name": "Agrawal Water Supply",
+        "address": "Tikri, Sector 48 Gurugram, Haryana 122001",
+        "gst" : "KPK124214L",
+        "email" : "agrawalwater@gmai.com",
+        "password" : "water1234"
+    }
+Response:{
+			"success": true
+   		}
+5. http://169.57.43.76:31110/comp/
+Method: POST
+Payload:{
+        "email" : "agrawalwater@gmai.com"
+}
+
+Response:[
+    {
+        "_id": "195fe4132b3bb23f155f02f142d4c084",
+        "_rev": "1-792ef4f41c776189b87046c770aeaa03",
+        "modifiedDate": 1625653213999,
+        "name": "Agrawal Water Supply",
+        "gst": "KPK124214L",
+        "email": "agrawalwater@gmai.com",
+        "password": "water1234",
+        "address": "Tikri, Sector 48 Gurugram, Haryana 122001",
+        "createdDate": 1625653213999
+    }
+]
+6. http://169.57.43.76:31110/comp/update
+Method: POST
+Payload:{
+		"_id": "195fe4132b3bb23f155f02f142d4c084", //mandatory field
+        "email" : "agrawalwater@gmai.com" //List of fields that  have to update
+}
+
+Response: {
+    "success": true,
+} 
+
+7. http://169.57.43.76:31110/users/signup
+Method: POST
+Payload:{
+    "name": "ravi",
+    "mobile" : "1234567890",
+    "password": "passw0rd",
+    "address" : "Sohna road sector 48 gurgaon"
+}
+
+Response:{
+    "success": true
+}
+
+8. http://169.57.43.76:31110/users/login      //Temp for get the token generated
+Method: GET
+Payload :
+Response: {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjozLCJuYW1lIjoicmF2aSJ9LCJpYXQiOjE2MjU2NTMxOTZ9.5M7JGaRP932q2FY7EHQVE26H4NLVfqx1ILcZTQ9L4UA"
+}
+
+9. http://169.57.43.76:31110/users/
+Method: POST
+Payload:
+Response:[
+    {
+        "_id": "195fe4132b3bb23f155f02f142d9c0d2",
+        "_rev": "1-ae3cf89d0a2d67188c157788f5035c34",
+        "modifiedDate": 1625656314969,
+        "name": "Hitesh",
+        "address": "Sohna road sector 48 gurgaon",
+        "mobile": "8882165735",
+        "createdDate": 1625656314969
+    },
+    {
+        "_id": "80501cec1cf2d5a493b6e7472f74c046",
+        "_rev": "1-d6728e2b6f46232d7dd0a6a54ee1bd88",
+        "modifiedDate": 1625648436527,
+        "name": "ravi",
+        "address": "Sohna road sector 48 gurgaon",
+        "mobile": "1234567890",
+        "createdDate": 1625648436527
+    },
+    {
+        "_id": "dfe8c1a583edb27145f289066c6afa0a",
+        "_rev": "2-924efb7125b84d32cddca42add41e4c6",
+        "modifiedDate": 1625656261087,
+        "name": "Deepak",
+        "address": "Sohna road sector 48 gurgaon",
+        "mobile": "9654042112",
+        "createdDate": 1625656261087
+    },
+    {
+        "_id": "dfe8c1a583edb27145f289066c6c3dd9",
+        "_rev": "1-6ffcdb9b20973109aeedf2b667beda7e",
+        "modifiedDate": 1625656302316,
+        "name": "Raj",
+        "address": "Sohna road sector 48 gurgaon",
+        "mobile": "9650929652",
+        "createdDate": 1625656302316
+    }
+]

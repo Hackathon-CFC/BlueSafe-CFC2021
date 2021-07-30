@@ -1,0 +1,3116 @@
+{
+  "name": "Water Quality Management",
+  "type": "dialog",
+  "counts": {
+    "entity": 19,
+    "intent": 2,
+    "actions": 4,
+    "intents": 2,
+    "entities": 19,
+    "global_variables": 0
+  },
+  "status": "Available",
+  "created": "2021-06-28T17:12:46.920Z",
+  "updated": "2021-07-07T11:42:40.582Z",
+  "language": "en",
+  "skill_id": "5d2a7e75-ac53-4cee-8414-24a95c3793b6",
+  "workspace": {
+    "actions": [
+      {
+        "steps": [
+          {
+            "step": "step_204",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Thanks for providing your location.Let me check and revert back to you.\nAlthough your current location is \nIn the meantime, you use below options to contiue."
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Go back to Main menu",
+                      "value": {
+                        "input": {
+                          "text": "Go back to Main menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit ",
+                      "value": {
+                        "input": {
+                          "text": "Exit "
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_204_entity_27466",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_204",
+            "condition": {
+              "exists": {
+                "variable": "step_577"
+              }
+            },
+            "next_step": "step_491"
+          },
+          {
+            "step": "step_249",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Water pollution can be caused in a number of ways, one of the most polluting being city sewage and industrial waste discharge. Indirect sources of water pollution include contaminants that enter the water supply from soils or groundwater systems and from the atmosphere via rain.\n\nFor more information you can visit : \"https://wwf.panda."
+                          },
+                          {
+                            "scalar": "org/discover/knowledge_hub/teacher_resources/webfieldtrips/water_pollution/#:~:text=Sources%20and%20effects%20of%20water,from%20the%20atmosphere%20via%20rain.\"\nPlease select any onr option to continue :"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Go back to main menu ",
+                      "value": {
+                        "input": {
+                          "text": "Go back to main menu "
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit Chatbox",
+                      "value": {
+                        "input": {
+                          "text": "Exit Chatbox"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_249_entity_31738",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_249",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "Where does water pollution come from?",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_879"
+          },
+          {
+            "step": "step_281",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Thanks for Contacting. feel free to re-open the chatbox anytime by typing \"Hi\" or \"Hello\""
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "end_action"
+            },
+            "variable": "step_281",
+            "condition": {
+              "or": [
+                {
+                  "neq": [
+                    {
+                      "variable": "step_552"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_552_entity_39106"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_249"
+                    },
+                    {
+                      "value": "Go back to main menu ",
+                      "from_entity": "action_13503_step_249_entity_31738"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_879"
+                    },
+                    {
+                      "value": "Go back to main Menu",
+                      "from_entity": "action_13503_step_879_entity_20243"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_204"
+                    },
+                    {
+                      "value": "Go back to Main menu",
+                      "from_entity": "action_13503_step_204_entity_27466"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_491"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_491_entity_8940"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_487"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_487_entity_26182"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_460"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_460_entity_33220"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_578"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_578_entity_30934"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_541"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_541_entity_49336"
+                    }
+                  ]
+                },
+                {
+                  "neq": [
+                    {
+                      "variable": "step_633"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_633_entity_24915"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_512"
+                    },
+                    {
+                      "value": "Exit Chat-Box",
+                      "from_entity": "action_13503_step_512_entity_45800"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "step": "step_291",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": []
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "replay",
+              "clear": [
+                {
+                  "variable": "step_512"
+                }
+              ]
+            },
+            "variable": "step_291",
+            "condition": {
+              "or": [
+                {
+                  "eq": [
+                    {
+                      "variable": "step_552"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_552_entity_39106"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_249"
+                    },
+                    {
+                      "value": "Go back to main menu ",
+                      "from_entity": "action_13503_step_249_entity_31738"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_879"
+                    },
+                    {
+                      "value": "Go back to main Menu",
+                      "from_entity": "action_13503_step_879_entity_20243"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_204"
+                    },
+                    {
+                      "value": "Go back to Main menu",
+                      "from_entity": "action_13503_step_204_entity_27466"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_491"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_491_entity_8940"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_487"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_487_entity_26182"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_460"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_460_entity_33220"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_578"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_578_entity_30934"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_541"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_541_entity_49336"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_633"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_13503_step_633_entity_24915"
+                    }
+                  ]
+                }
+              ]
+            },
+            "next_step": "step_281"
+          },
+          {
+            "step": "step_460",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Contaminated water can harbor bacteria, such as those responsible for diarrhea, cholera, dysentery, typhoid, hepatitis A, and polio. According to the UN, every year, approximately 297,000 children under five die from diseases linked to poor sanitation, poor hygiene, or unsafe drinking water.\nFor more information visit: \"https://www.medicalnewstoday.com/articles/water-pollution-and-human-"
+                          },
+                          {
+                            "scalar": "health#water-pollution-and-human-health\""
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_460_entity_33220",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_460",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "Effects of water pollution to humans",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_578"
+          },
+          {
+            "step": "step_487",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Water purification, process by which undesired chemical compounds, organic and inorganic materials, and biological contaminants are removed from water. ... Water purification also meets the needs of medical, pharmacological, chemical, and industrial applications for clean and potable water.\nFor more information visit : \"https://www.britannica.com/topic/water-purification\""
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_487_entity_26182",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_487",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "What is water purification?",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_460"
+          },
+          {
+            "step": "step_491",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "There are amble ways to detect the polluted water.\nHere are few steps mentioned below. If you still wish to know more, Please go through this link : \"Link Not available right now\"\n1. Taste of water should not be acidic or basic\n2. Water should not be of any colour.\n3. Water should be odourless.\nThanks for choosing J.A.R.V.I.S chatbox. Have a nice day"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_491_entity_8940",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_491",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "How to detect polluted water?",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_487"
+          },
+          {
+            "step": "step_512",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Hello I will be assisting you today. Feel free to ask any questions regarding water quality improvement."
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "What causes freshwater shortages?",
+                      "value": {
+                        "input": {
+                          "text": "What causes freshwater shortages?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "What is hard water?",
+                      "value": {
+                        "input": {
+                          "text": "What is hard water?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "How can water supplies be increased?",
+                      "value": {
+                        "input": {
+                          "text": "How can water supplies be increased?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "How to detect polluted water?",
+                      "value": {
+                        "input": {
+                          "text": "How to detect polluted water?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Know about steps to improve water quality",
+                      "value": {
+                        "input": {
+                          "text": "Know about steps to improve water quality"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Where does water pollution come from?",
+                      "value": {
+                        "input": {
+                          "text": "Where does water pollution come from?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Ways through which water pollutants enters in environment",
+                      "value": {
+                        "input": {
+                          "text": "Ways through which water pollutants enters in environment"
+                        }
+                      }
+                    },
+                    {
+                      "label": "What is water purification?",
+                      "value": {
+                        "input": {
+                          "text": "What is water purification?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Know about quality of water in your area",
+                      "value": {
+                        "input": {
+                          "text": "Know about quality of water in your area"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Effects of water pollution to humans",
+                      "value": {
+                        "input": {
+                          "text": "Effects of water pollution to humans"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit Chat-Box",
+                      "value": {
+                        "input": {
+                          "text": "Exit Chat-Box"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "context": {
+              "variables": []
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_512_entity_45800",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_512",
+            "next_step": "step_552"
+          },
+          {
+            "step": "step_541",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Most water-short regions of the world with dry climates have long-standing water conservation traditions. ... To meet increased demands, water resource management practitioners are augmenting the limited natural water supply with desalination, water reuse, enhanced groundwater recharge and inter-basin transfers.\nFor more information visit : \"https://www.greenfacts.org/en/water-resources/l-3/5-"
+                          },
+                          {
+                            "scalar": "growing-demand.htm#:~:text=Most%20water%2Dshort%20regions%20of,long%2Dstanding%20water%20conservation%20traditions.&text=To%20meet%20increased%20demands%2C%20water,recharge%20and%20inter%2Dbasin%20transfers.\""
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_541_entity_49336",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_541",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "How can water supplies be increased?",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_633"
+          },
+          {
+            "step": "step_552",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": ". Use a water filter\n. Properly dispose of hazardous wastes \n. Keep your pipes and plumbing maintained\n. Properly maintain septic tanks\n. Boil your water\nFor More info visit : \"https://scadata.net/easy-ways-improve-water-quality/\""
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_552_entity_39106",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_552",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "Know about steps to improve water quality",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_249"
+          },
+          {
+            "step": "step_577",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Please let me know your location so that i can proceed further."
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "question": {
+              "free_text": true,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_577",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "Know about quality of water in your area",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_204"
+          },
+          {
+            "step": "step_578",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Hard water is water that has high mineral content (in contrast with \"soft water\"). Hard water is formed when water percolates through deposits of limestone, chalk or gypsum[1] which are largely made up of calcium and magnesium carbonates, bicarbonates and sulfates.\nFor more information visit : \"https://en.wikipedia.org/wiki/Hard_water\""
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_578_entity_30934",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_578",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "What is hard water?",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_541"
+          },
+          {
+            "step": "step_633",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Major Causes Of Water Scarcity :-\nClimate change.\nNatural calamities such as droughts and floods.\nIncreased human consumption.\nOveruse and wastage of water.\nA global rise in freshwater demand.\nOveruse of aquifers and its consequent slow recharge.\nFor more informaton : \"https://byjus.com/biology/causes-of-water-scarcity/\""
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_633_entity_24915",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_633",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "What causes freshwater shortages?",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_291"
+          },
+          {
+            "step": "step_879",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Discharge of sewage water represents a mayor global source of pollution. Domestic and industrial wastes are discharged unto surface water through sewage systems. In some cases industrial waste is released directly unto surface water.\nFor more information visit : \"https://www.lenntech.com/water-pollutants-faq.htm#:~:text=What%20are%20the %20specific%20ways,"
+                          },
+                          {
+                            "scalar": "released%20directly%20unto%20surface%20water.\"\nPlease select below options to Continue :"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Exit Chatbox",
+                      "value": {
+                        "input": {
+                          "text": "Exit Chatbox"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Go back to main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Go back to main Menu"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_13503_step_879_entity_20243",
+              "max_tries": 3,
+              "only_populate_when_prompted": true
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_879",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_512"
+                },
+                {
+                  "value": "Ways through which water pollutants enters in environment",
+                  "from_entity": "action_13503_step_512_entity_45800"
+                }
+              ]
+            },
+            "next_step": "step_577"
+          }
+        ],
+        "title": "Water Quality improvement",
+        "action": "action_13503",
+        "handlers": [],
+        "condition": {
+          "intent": "action_13503_intent_29582"
+        },
+        "variables": [
+          {
+            "title": "Thanks for providing your location.Let me check and revert back ",
+            "variable": "step_204"
+          },
+          {
+            "title": "Water pollution can be caused in a number of ways, one of the mo",
+            "variable": "step_249"
+          },
+          {
+            "title": "Thanks for Contacting. feel free to re-open the chatbox anytime ",
+            "variable": "step_281"
+          },
+          {
+            "title": "No response",
+            "variable": "step_291"
+          },
+          {
+            "title": "Contaminated water can harbor bacteria, such as those responsibl",
+            "variable": "step_460"
+          },
+          {
+            "title": "Water purification, process by which undesired chemical compound",
+            "variable": "step_487"
+          },
+          {
+            "title": "There are amble ways to detect the polluted water. Here are few ",
+            "variable": "step_491"
+          },
+          {
+            "title": "Hello I will be assisting you today. Feel free to ask any questi",
+            "variable": "step_512"
+          },
+          {
+            "title": "Most water-short regions of the world with dry climates have lon",
+            "variable": "step_541"
+          },
+          {
+            "title": ". Use a water filter . Properly dispose of hazardous wastes . Ke",
+            "variable": "step_552"
+          },
+          {
+            "title": "Please let me know your location so that i can proceed further.",
+            "variable": "step_577"
+          },
+          {
+            "title": "Hard water is water that has high mineral content (in contrast w",
+            "variable": "step_578"
+          },
+          {
+            "title": "Major Causes Of Water Scarcity :- Climate change. Natural calami",
+            "variable": "step_633"
+          },
+          {
+            "title": "Discharge of sewage water represents a mayor global source of po",
+            "variable": "step_879"
+          }
+        ],
+        "next_action": "anything_else",
+        "disambiguation_opt_out": false
+      },
+      {
+        "steps": [
+          {
+            "step": "step_331",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Please visit this link to get the complete information about how water is supplied to homes : https://www.britannica.com/technology/water-supply-system"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_14602_step_331_entity_19099",
+              "max_tries": 3,
+              "only_populate_when_prompted": false
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_331",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_584"
+                },
+                {
+                  "value": "How is water supplied to our homes?",
+                  "from_entity": "action_14602_step_584_entity_12063"
+                }
+              ]
+            },
+            "next_step": "step_525"
+          },
+          {
+            "step": "step_397",
+            "handlers": [],
+            "resolver": {
+              "type": "replay",
+              "clear": [
+                {
+                  "variable": "step_584"
+                }
+              ]
+            },
+            "variable": "step_397",
+            "condition": {
+              "or": [
+                {
+                  "eq": [
+                    {
+                      "variable": "step_848"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_14602_step_848_entity_22307"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_536"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_14602_step_536_entity_13554"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_331"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_14602_step_331_entity_19099"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_525"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_14602_step_525_entity_21531"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_735"
+                    },
+                    {
+                      "value": "Main Menu",
+                      "from_entity": "action_14602_step_735_entity_32643"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "step": "step_525",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Water use efficiency (WUE) is defined as the amount of carbon assimilated as biomass or grain produced per unit of water used by the crop. ... Climate change will affect plant growth, but we have opportunities to enhance WUE through crop selection and cultural practices to offset the impact of a changing climate."
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_14602_step_525_entity_21531",
+              "max_tries": 3,
+              "only_populate_when_prompted": false
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_525",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_584"
+                },
+                {
+                  "value": "What is water usage efficiency",
+                  "from_entity": "action_14602_step_584_entity_12063"
+                }
+              ]
+            },
+            "next_step": "step_735"
+          },
+          {
+            "step": "step_536",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Filtered tap water is generally safer, cheaper, more convenient and environmentally friendly.\nWe can filter the tap water but water filters are not affordable for the majority of population in India"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_14602_step_536_entity_13554",
+              "max_tries": 3,
+              "only_populate_when_prompted": false
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_536",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_584"
+                },
+                {
+                  "value": "Is Tap water in India is drinkable  ?",
+                  "from_entity": "action_14602_step_584_entity_12063"
+                }
+              ]
+            },
+            "next_step": "step_547"
+          },
+          {
+            "step": "step_547",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Thank you. Have a nice day"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "end_action"
+            },
+            "variable": "step_547",
+            "condition": {
+              "or": [
+                {
+                  "eq": [
+                    {
+                      "variable": "step_584"
+                    },
+                    {
+                      "value": "Exit",
+                      "from_entity": "action_14602_step_584_entity_12063"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_536"
+                    },
+                    {
+                      "value": "Exit",
+                      "from_entity": "action_14602_step_536_entity_13554"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_848"
+                    },
+                    {
+                      "value": "Exit",
+                      "from_entity": "action_14602_step_848_entity_22307"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_525"
+                    },
+                    {
+                      "value": "Exit",
+                      "from_entity": "action_14602_step_525_entity_21531"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_735"
+                    },
+                    {
+                      "value": "Exit",
+                      "from_entity": "action_14602_step_735_entity_32643"
+                    }
+                  ]
+                },
+                {
+                  "eq": [
+                    {
+                      "variable": "step_331"
+                    },
+                    {
+                      "value": "Exit",
+                      "from_entity": "action_14602_step_331_entity_19099"
+                    }
+                  ]
+                }
+              ]
+            },
+            "next_step": "step_840"
+          },
+          {
+            "step": "step_584",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "Hi there,\nI am your virtual assistance.\nPlease select one of the options to continue"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Is Tap water in India is drinkable  ?",
+                      "value": {
+                        "input": {
+                          "text": "Is Tap water in India is drinkable  ?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "What is water usage efficiency",
+                      "value": {
+                        "input": {
+                          "text": "What is water usage efficiency"
+                        }
+                      }
+                    },
+                    {
+                      "label": "How much water do I use per day?",
+                      "value": {
+                        "input": {
+                          "text": "How much water do I use per day?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "How is water supplied to our homes?",
+                      "value": {
+                        "input": {
+                          "text": "How is water supplied to our homes?"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Steps of water purification before supplied to home",
+                      "value": {
+                        "input": {
+                          "text": "Steps of water purification before supplied to home"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "context": {
+              "variables": []
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_14602_step_584_entity_12063",
+              "max_tries": 3,
+              "only_populate_when_prompted": false
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_584",
+            "next_step": "step_848"
+          },
+          {
+            "step": "step_735",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "There are seven steps of water purification :\nION Exchange and Coagulation. This is the first step of the purification process. ...\nSedimentation. ...\nFiltration and Granular Activated Carbon. ...\nDisinfection. ...\nCarbon Filters. ...\nReverse Osmosis. ...\nStore Purified Water.\nFor detailed information, Please visit : \"https://www.diesel-plus.com/the-seven-steps-of-the-water-purification-process/\""
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_14602_step_735_entity_32643",
+              "max_tries": 3,
+              "only_populate_when_prompted": false
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_735",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_584"
+                },
+                {
+                  "value": "Steps of water purification before supplied to home",
+                  "from_entity": "action_14602_step_584_entity_12063"
+                }
+              ]
+            },
+            "next_step": "step_536"
+          },
+          {
+            "step": "step_840",
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_840",
+            "next_step": "step_397"
+          },
+          {
+            "step": "step_848",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text_expression": {
+                        "concat": [
+                          {
+                            "scalar": "There is no specific answer for how much water should an average house needs for daily basis. But water usage should not exceed more that 150 litres per day."
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                },
+                {
+                  "options": [
+                    {
+                      "label": "Main Menu",
+                      "value": {
+                        "input": {
+                          "text": "Main Menu"
+                        }
+                      }
+                    },
+                    {
+                      "label": "Exit",
+                      "value": {
+                        "input": {
+                          "text": "Exit"
+                        }
+                      }
+                    }
+                  ],
+                  "response_type": "option",
+                  "repeat_on_reprompt": true
+                }
+              ]
+            },
+            "handlers": [
+              {
+                "type": "not_found",
+                "title": "validation_not_found_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I didn't catch that. Select a valid option:"
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_handler",
+                "resolver": {
+                  "type": "prompt_again"
+                },
+                "next_handler": "validation_not_found_max_tries_handler"
+              },
+              {
+                "type": "not_found_max_tries",
+                "title": "validation_not_found_max_tries_handler",
+                "output": {
+                  "generic": [
+                    {
+                      "values": [
+                        {
+                          "text": "I'm afraid I don't understand. Let me see if I can help another way."
+                        }
+                      ],
+                      "response_type": "text"
+                    }
+                  ]
+                },
+                "handler": "validation_not_found_max_tries_handler",
+                "resolver": {
+                  "type": "end_action"
+                }
+              }
+            ],
+            "question": {
+              "entity": "action_14602_step_848_entity_22307",
+              "max_tries": 3,
+              "only_populate_when_prompted": false
+            },
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_848",
+            "condition": {
+              "eq": [
+                {
+                  "variable": "step_584"
+                },
+                {
+                  "value": "How much water do I use per day?",
+                  "from_entity": "action_14602_step_584_entity_12063"
+                }
+              ]
+            },
+            "next_step": "step_331"
+          }
+        ],
+        "title": "Water Usage Efficiency & supply",
+        "action": "action_14602",
+        "handlers": [],
+        "condition": {
+          "intent": "action_14602_intent_26084"
+        },
+        "variables": [
+          {
+            "title": "Please visit this link to get the complete information about how",
+            "variable": "step_331"
+          },
+          {
+            "title": "No response",
+            "variable": "step_397"
+          },
+          {
+            "title": "Water use efficiency (WUE) is defined as the amount of carbon as",
+            "variable": "step_525"
+          },
+          {
+            "title": "Filtered tap water is generally safer, cheaper, more convenient ",
+            "variable": "step_536"
+          },
+          {
+            "title": "Thank you. Have a nice day",
+            "variable": "step_547"
+          },
+          {
+            "title": "Hi there, I am your virtual assistance. Please select one of the",
+            "variable": "step_584"
+          },
+          {
+            "title": "There are seven steps of water purification : ION Exchange and C",
+            "variable": "step_735"
+          },
+          {
+            "title": "No response",
+            "variable": "step_840"
+          },
+          {
+            "title": "There is no specific answer for how much water should an average",
+            "variable": "step_848"
+          }
+        ],
+        "next_action": "action_13503",
+        "disambiguation_opt_out": false
+      },
+      {
+        "steps": [
+          {
+            "step": "step_001",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text": "I am afraid I do not understand what you are asking, please re-phrase your question."
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_001"
+          }
+        ],
+        "title": "Retry when no action matches",
+        "action": "anything_else",
+        "handlers": [],
+        "condition": {
+          "expression": "anything_else"
+        },
+        "variables": [
+          {
+            "variable": "step_001"
+          }
+        ],
+        "disambiguation_opt_out": true
+      },
+      {
+        "steps": [
+          {
+            "step": "step_001",
+            "output": {
+              "generic": [
+                {
+                  "values": [
+                    {
+                      "text": "Welcome, how can I assist you?"
+                    }
+                  ],
+                  "response_type": "text",
+                  "selection_policy": "sequential"
+                }
+              ]
+            },
+            "handlers": [],
+            "resolver": {
+              "type": "continue"
+            },
+            "variable": "step_001"
+          }
+        ],
+        "title": "Greet customer",
+        "action": "welcome",
+        "handlers": [],
+        "condition": {
+          "expression": "welcome"
+        },
+        "variables": [
+          {
+            "variable": "step_001"
+          }
+        ],
+        "next_action": "action_14602",
+        "disambiguation_opt_out": true
+      }
+    ],
+    "intents": [
+      {
+        "intent": "action_13503_intent_29582",
+        "examples": [
+          {
+            "text": "Hello"
+          },
+          {
+            "text": "Hi"
+          },
+          {
+            "text": "Improvement"
+          },
+          {
+            "text": "Quality"
+          },
+          {
+            "text": "Water"
+          }
+        ]
+      },
+      {
+        "intent": "action_14602_intent_26084",
+        "examples": [
+          {
+            "text": "Hello"
+          },
+          {
+            "text": "Hi"
+          },
+          {
+            "text": "Water Usage Efficiency & supply"
+          }
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "entity": "action_13503_step_204_entity_27466",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit ",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Go back to Main menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_249_entity_31738",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit Chatbox",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Go back to main menu ",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_460_entity_33220",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_487_entity_26182",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_491_entity_8940",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_512_entity_45800",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Effects of water pollution to humans",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Exit Chat-Box",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "How can water supplies be increased?",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "How to detect polluted water?",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Know about quality of water in your area",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Know about steps to improve water quality",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Ways through which water pollutants enters in environment",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "What causes freshwater shortages?",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "What is hard water?",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "What is water purification?",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Where does water pollution come from?",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_541_entity_49336",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_552_entity_39106",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_578_entity_30934",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_633_entity_24915",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_13503_step_879_entity_20243",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit Chatbox",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Go back to main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_14602_step_331_entity_19099",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_14602_step_525_entity_21531",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_14602_step_536_entity_13554",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_14602_step_584_entity_12063",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "How is water supplied to our homes?",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "How much water do I use per day?",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Is Tap water in India is drinkable  ?",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Steps of water purification before supplied to home",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "What is water usage efficiency",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_14602_step_735_entity_32643",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "action_14602_step_848_entity_22307",
+        "values": [
+          {
+            "type": "synonyms",
+            "value": "Exit",
+            "synonyms": []
+          },
+          {
+            "type": "synonyms",
+            "value": "Main Menu",
+            "synonyms": []
+          }
+        ],
+        "fuzzy_match": true
+      },
+      {
+        "entity": "sys-number",
+        "values": []
+      },
+      {
+        "entity": "sys-time",
+        "values": []
+      }
+    ],
+    "metadata": {
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "variables": [],
+    "counterexamples": [],
+    "system_settings": {
+      "off_topic": {
+        "enabled": true
+      },
+      "disambiguation": {
+        "prompt": "Did you mean:",
+        "enabled": true,
+        "randomize": true,
+        "max_suggestions": 5,
+        "suggestion_text_policy": "title",
+        "none_of_the_above_prompt": "None of the above"
+      },
+      "intent_classification": {
+        "training_backend_version": "v2"
+      },
+      "spelling_auto_correct": true
+    },
+    "learning_opt_out": false
+  },
+  "description": "",
+  "workspace_id": "5d2a7e75-ac53-4cee-8414-24a95c3793b6",
+  "dialog_settings": {
+    "actions": true
+  },
+  "snapshot_references": [
+    {
+      "snapshot": "draft"
+    }
+  ],
+  "workspace_reference": {
+    "metadata": {
+      "api_version": {
+        "major_version": "v2",
+        "minor_version": "2018-11-08"
+      }
+    },
+    "system_settings": {
+      "off_topic": {
+        "enabled": true
+      },
+      "disambiguation": {
+        "prompt": "Did you mean:",
+        "enabled": true,
+        "randomize": true,
+        "max_suggestions": 5,
+        "suggestion_text_policy": "title",
+        "none_of_the_above_prompt": "None of the above"
+      },
+      "intent_classification": {
+        "training_backend_version": "v2"
+      },
+      "spelling_auto_correct": true
+    },
+    "learning_opt_out": false,
+    "status": "Available"
+  },
+  "assistant_references": [
+    {
+      "name": "Whatson_Chatbot",
+      "assistant_id": "472460cf-5f63-40b3-8008-334ecd3e7a4d",
+      "skill_reference": "actions skill"
+    }
+  ]
+}
