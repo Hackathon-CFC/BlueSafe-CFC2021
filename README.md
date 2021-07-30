@@ -51,7 +51,7 @@ To encourage optimal water choices by consumers and local governments and incent
 
 ## Demo Video
 
-[![Watch the video](https://github.com/deepakb2410/CFC-2021/blob/main/UX_Design/Blue-Safe.png)](https://www.dropbox.com/s/rgzqa5whr34rcsa/CFC-2021-BlueSafe.mp4?dl=0)
+[![Watch the video](https://github.com/Hackathon-CFC/BlueSafe-CFC2021/blob/main/UX_Design/Blue-Safe.png)](https://www.dropbox.com/s/rgzqa5whr34rcsa/CFC-2021-BlueSafe.mp4?dl=0)
 
 ### Additional Demo Video
 [Click Me To Watch Demo](https://www.dropbox.com/s/rgzqa5whr34rcsa/CFC-2021-BlueSafe.mp4?dl=0)
