@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wt-app-deployment
+  labels:
+    app: wt-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wt-app
+  template:
+    metadata:
+      labels:
+        app: wt-app 
+    spec:
+      containers:
+      - name: wt-app
+        image: docker.io/deepakti/cfc2021-image:v1.5
+        ports:
+        - containerPort: 4000

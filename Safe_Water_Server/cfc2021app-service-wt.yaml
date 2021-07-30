@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-wt-service
+spec:
+  selector:
+    app: wt-app
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 5000
+    targetPort: 4000
+    nodePort: 31111

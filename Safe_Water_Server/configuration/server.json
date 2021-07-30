@@ -1,0 +1,7 @@
+{
+    "mfaConfiguration": {
+        "client_id": "8d0f3f7a-6d43-4510-b51b-6893eed3fba5",
+        "client_secret": "bm4eBSiJQ1",
+        "tenant": "cfcibm.verify.ibm.com"
+    }
+}
