@@ -1,5 +1,3 @@
-# Title
-
 ## Blue Safe
 
 ## Contents
@@ -13,11 +11,13 @@
 1. [Deployment and configuration](#deployment-and-configuration)
 1. [Live demo](#live-demo)
 1. [Built with](#built-with)
+1. [Versioning](#versioning)
 1. [Authors](#authors)
 1. [License](#license)
 1. [Acknowledgments](#acknowledgments)
 
 ## Value Offered
+Life saver app that enables people in locating, checking water quality and share info about availability and waiting time of the nearby safe water resources
 
 ### What is the problem?
 Water is the natural resource that is most threatened by climate change and is a prerequisite for life on earth. According to the World Health Organization, 
@@ -55,6 +55,8 @@ To encourage optimal water choices by consumers and local governments and incent
 
 ### Additional Demo Video
 [Click Me To Watch Demo](https://www.dropbox.com/s/rgzqa5whr34rcsa/CFC-2021-BlueSafe.mp4?dl=0)
+
+[Download Here](https://github.com/Hackathon-CFC/BlueSafe-CFC2021/blob/main/tech-docs/CFC-2021-BlueSafe.mp4)
 
 ## The architecture
 
@@ -129,15 +131,11 @@ Our app will have new features and are part of our road map. These features are:
 | Frontend                   | [Frontend.md](https://github.com/deepakb2410/CFC-2021/blob/main/Safe_Water_UI/README.md) |
 | Backend                    | [Backend.md](https://github.com/deepakb2410/CFC-2021/blob/main/Safe_Water_Server/README.md) |
 
-To use the solution and existing deployed infrastructure, you can register yourself as a new user or you can use the default credentials saved in our cloudant database placed at respective paths
-
-Default Number:
-
-Default Password:
+To use the solution and existing deployed infrastructure, you can register yourself as a new user or you can use the default credentials saved in our cloudant database placed at respective paths.
 
 ## Live demo
 
-APK download link : 
+APK download link : Download [URL](https://github.com/Hackathon-CFC/BlueSafe-CFC2021/blob/main/BlueSafe.apk)
 
 ## Built with
 
@@ -151,9 +149,16 @@ APK download link :
 * [kubernetes](https://kubernetes.io/) - Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications.
  * [Carbon Design System - IBM](https://www.carbondesignsystem.com/) - Design Language used for whole project
 
+## Versioning
+"Blue Safe" Call for Code submission for July 2021 is available under git tag v1.0.0.0
+
 ## Authors
 
-<TBD>
+- Deepak Bammi
+- Jayant Sharma
+- Ravikant Singh Kushwaha
+- Aakash Ahuja
+- Chandresh Tiwari
 
 ## License
 
